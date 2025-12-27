@@ -1,38 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hama Gamer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming • Minecraft • Mods • Texture Packs</title>
   <style>
     body {
-      margin: 0;
-      background: #0b0f1a;
+      background: #0f172a;
       color: white;
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .box {
       text-align: center;
-      background: #12172a;
-      padding: 30px;
-      border-radius: 20px;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      font-size: 30px;
+
+    /* Top Box */
+    .top-box {
+      background: #1e293b;
+      padding: 40px 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      font-size: 24px;
+      font-weight: bold;
     }
+
+    h2 {
+      margin: 20px 0 10px 0;
+    }
+
     p {
-      color: #9ca3af;
+      margin: 10px 0 20px 0;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 500px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Texture Pack Buttons */
+    .texture-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .texture-buttons .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .texture-buttons .btn:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
-    <h1>🎮 Hama Gamer</h1>
-    <p>Gaming Home Page</p>
+  <!-- Top Box -->
+  <div class="top-box">
+    Gaming • Minecraft • Mods • Texture Packs
+  </div>
+
+  <!-- Minecraft Card with Buttons -->
+  <div class="card">
+    <h2>🔥 Minecraft Texture Packs</h2>
+    <p>Click a button to download your favorite packs</p>
+
+    <div class="texture-buttons">
+      <a href="https://example.com/pack1.zip" download class="btn">Texture Pack 1</a>
+      <a href="https://example.com/pack2.zip" download class="btn">Texture Pack 2</a>
+      <a href="https://example.com/pack3.zip" download class="btn">Texture Pack 3</a>
+      <!-- Add more buttons by copying the <a> line -->
+    </div>
+  </div>
+
+  <!-- Discord Card -->
+  <div class="card">
+    <h2>📢 Join my Discord</h2>
+    <a href="https://discord.gg/pUH5kBZU">Click here</a>
   </div>
 
 </body>
