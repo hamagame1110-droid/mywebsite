@@ -1,98 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Gaming • Minecraft • Mods • Texture Packs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Texture Packs</title>
   <style>
     body {
-      background: #0f172a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 0;
-    }
-
-    /* Top Box */
-    .top-box {
-      background: #1e293b;
-      padding: 40px 20px;
-      margin-bottom: 30px;
-      border-radius: 15px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    h2 {
-      margin: 20px 0 10px 0;
-    }
-
-    p {
-      margin: 10px 0 20px 0;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 15px;
-      max-width: 500px;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    /* Texture Pack Buttons */
-    .texture-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-    }
-
-    .texture-buttons .btn {
-      background-color: #4CAF50;
+      font-family: Arial, sans-serif;
+      background-image: url('https://i.imgur.com/JxZ0g9s.jpg'); /* Minecraft background */
+      background-size: cover;
+      background-attachment: fixed;
       color: white;
-      padding: 12px 20px;
-      text-decoration: none;
+    }
+
+    header {
+      background-color: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 0 10px #000;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #38bdf8;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      background-color: #1e293b;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
       border-radius: 8px;
-      font-weight: bold;
+      box-shadow: 0 0 5px #000;
       transition: 0.3s;
     }
 
-    .texture-buttons .btn:hover {
-      background-color: #45a049;
+    .buttons button:hover {
+      background-color: #38bdf8;
+      color: #000;
+    }
+
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .pack {
+      background-color: rgba(0,0,0,0.7);
+      padding: 15px 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 180px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .pack a {
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Box -->
-  <div class="top-box">
-    Gaming • Minecraft • Mods • Texture Packs
-  </div>
-
-  <!-- Minecraft Card with Buttons -->
-  <div class="card">
-    <h2>🔥 Minecraft Texture Packs</h2>
-    <p>Click a button to download your favorite packs</p>
-
-    <div class="texture-buttons">
-      <a href="https://example.com/pack1.zip" download class="btn">Texture Pack 1</a>
-      <a href="https://example.com/pack2.zip" download class="btn">Texture Pack 2</a>
-      <a href="https://example.com/pack3.zip" download class="btn">Texture Pack 3</a>
-      <!-- Add more buttons by copying the <a> line -->
+  <header>
+    <h1>Minecraft Texture Packs</h1>
+    <div class="buttons">
+      <button onclick="showPacks('java')">Java</button>
+      <button onclick="showPacks('bedrock')">Bedrock/PE</button>
+      <button onclick="window.open('https://discord.gg/pUH5kBZU', '_blank')">Discord</button>
     </div>
-  </div>
+  </header>
 
-  <!-- Discord Card -->
-  <div class="card">
-    <h2>📢 Join my Discord</h2>
-    <a href="https://discord.gg/pUH5kBZU">Click here</a>
-  </div>
+  <main id="packs">
+    <!-- Packs will appear here -->
+  </main>
+
+  <script>
+    const javaPacks = [
+      {name: 'Java Pack 1', link: '#'},
+      {name: 'Java Pack 2', link: '#'},
+      {name: 'Java Pack 3', link: '#'},
+      {name: 'Java Pack 4', link: '#'},
+      {name: 'Java Pack 5', link: '#'},
+      {name: 'Java Pack 6', link: '#'},
+      {name: 'Java Pack 7', link: '#'},
+      {name: 'Java Pack 8', link: '#'},
+      {name: 'Java Pack 9', link: '#'},
+      {name: 'Java Pack 10', link: '#'},
+      {name: 'Java Pack 11', link: '#'},
+      {name: 'Java Pack 12', link: '#'},
+      {name: 'Java Pack 13', link: '#'},
+      {name: 'Java Pack 14', link: '#'},
+      {name: 'Java Pack 15', link: '#'},
+      {name: 'Java Pack 16', link: '#'},
+      {name: 'Java Pack 17', link: '#'},
+      {name: 'Java Pack 18', link: '#'},
+      {name: 'Java Pack 19', link: '#'},
+      {name: 'Java Pack 20', link: '#'},
+    ];
+
+    const bedrockPacks = [
+      {name: 'Bedrock Pack 1', link: '#'},
+      {name: 'Bedrock Pack 2', link: '#'},
+      {name: 'Bedrock Pack 3', link: '#'},
+      {name: 'Bedrock Pack 4', link: '#'},
+      {name: 'Bedrock Pack 5', link: '#'},
+      {name: 'Bedrock Pack 6', link: '#'},
+      {name: 'Bedrock Pack 7', link: '#'},
+      {name: 'Bedrock Pack 8', link: '#'},
+      {name: 'Bedrock Pack 9', link: '#'},
+      {name: 'Bedrock Pack 10', link: '#'},
+      {name: 'Bedrock Pack 11', link: '#'},
+      {name: 'Bedrock Pack 12', link: '#'},
+      {name: 'Bedrock Pack 13', link: '#'},
+      {name: 'Bedrock Pack 14', link: '#'},
+      {name: 'Bedrock Pack 15', link: '#'},
+    ];
+
+    function showPacks(type) {
+      const container = document.getElementById('packs');
+      container.innerHTML = '';
+      const packs = type === 'java' ? javaPacks : bedrockPacks;
+
+      packs.forEach(pack => {
+        const div = document.createElement('div');
+        div.className = 'pack';
+        div.innerHTML = `<h3>${pack.name}</h3><a href="${pack.link}" target="_blank">Download</a>`;
+        container.appendChild(div);
+      });
+    }
+
+    // Show Java packs by default
+    showPacks('java');
+  </script>
 
 </body>
 </html>
