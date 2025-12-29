@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Flappy Game</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { margin: 0; background: #0f172a; color: #e5e7eb; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    #gameWrap { width: 360px; max-width: 100%; background: #020617; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,.5); }
+    header { padding: 10px; text-align: center; background: #020617; font-weight: bold; }
+    canvas { display: block; background: linear-gradient(#38bdf8, #e0f2fe); }
+    .menu { padding: 16px; display: none; }
+    .menu.active { display: block; }
+    button { width: 100%; padding: 12px; margin: 8px 0; border: none; border-radius: 8px; background: #22c55e; color: #022c22; font-size: 16px; cursor: pointer; }
+    button.secondary { background: #334155; color: #e5e7eb; }
+    button.small { padding: 8px; font-size: 14px; }
+    .row { display: flex; justify-content: space-between; align-items: center; margin: 8px 0; }
+    input[type=range] { width: 100%; }
+    .hud { position: absolute; top: 60px; width: 360px; text-align: center; pointer-events: none; font-size: 22px; font-weight: bold; }
+    .coins { font-size: 14px; }
